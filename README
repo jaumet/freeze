@@ -1,7 +1,7 @@
 freeze script - README file
 ===========================
 
-This is the documentation for the freezer.sh script.
+This is the documentation for the freeze.sh script.
 PURPOSE: Create an HTML version of a drupal site from the server were the target drupal is. 
 
 It is useful when you don't want to maintain old drupal sites
@@ -11,11 +11,12 @@ freeze.sh is a way to archive drupal sites.
 REQUERIMENTS
 ------------
  - Tested with drupal-5.23 and 6.19.
- - Tested  in 2011 in updated Debian & Ubuntu standar machines.
+ - Tested in 2011 in updated Debian & Ubuntu standard machines.
  - httrack: for mirrowing the site.
  - Write permissions in:
             - [path_to_drupa]/[drupal.domain]
-            - [/tmp/]
+            - [/tmp/] resp. $WORKDIR
+  - freeze has been tested from the server were the drupal to freeze is.
 
 CONFIGURATION
 -------------
@@ -34,14 +35,14 @@ USAGE
 FEATURES
 --------
 
- - The old URLs (like http://[site url]/?q=node/3) will work after freezing the site. 
+ - The old URLs (like http://[site url]/?q=node/3) will work after freezing the site as . 
    (Using .htaccess RewriteRules)
- - The script does the code & DDBB backUp in your /tmp/ directory.
+ - The script does the code & DDBB backUp in your $WORKDIR directory.
 
 FUTURE
 ------
 
- - Adapt other the freezer to more web applications: CMS, wikis, etc
+ - Adapt the freeze script to more web applications: CMS, wikis, etc
 
 CREDITS
 -------
@@ -49,7 +50,7 @@ CREDITS
 freeze.sh is a servus.at promoted project 
 Copyright (C) 2010, Jaume Nualart & servus.at. Catalunya & Austria. Europe
 Licensed under the GNU GPL 3
-Authors: Jaume Nualart (jaume AT nualart.cat), Chris Hager (chris AT metachris.org), Kenneth Peiruza (kenneth AT ontralaguerra.org & Peda (peda AT servus.at).
+Authors: Jaume Nualart (jaume AT nualart.cat), Chris Hager (chris AT metachris.org), Kenneth Peiruza (kenneth AT contralaguerra.org & Peda (peda AT servus.at).
 Barcelona - Catalonia - UE - December 2010
 Contact/Comments: jaume AT nualart.cat
 
